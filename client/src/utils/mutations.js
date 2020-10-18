@@ -29,7 +29,11 @@ export const SAVE_BOOK = gql`
 		saveBook(book: $book) {
 			username
 			savedBooks {
+				authors
+				description
 				title
+				image
+				bookId
 			}
 		}
 	}
@@ -40,7 +44,11 @@ export const DELETE_BOOK = gql`
 		deleteBook(bookId: $bookId) {
 			username,
 			savedBooks {
+				authors
+				description
 				title
+				image
+				bookId
 			}
 		}
 	}
